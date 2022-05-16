@@ -10,6 +10,12 @@ jobs:
         run: |
           pwd
           ls -a 
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}""
+        # git clonse git@github:$GITHUB_REPOSITORY
+          # git checkout 
       - name: Checkout (po)
         uses: actions/checkout@v1 #will authenticate to your repo, fetch the code and checkout into the 
                                   ##commit that triggered the workflow

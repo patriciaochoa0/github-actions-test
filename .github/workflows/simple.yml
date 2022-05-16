@@ -9,6 +9,6 @@ jobs:
       - name: echo a string 
         run: echo "Hello World"
       - name: multiline script 
-        run: |
+        run: | #pipe runs mutliple commands 
           node -v
           npm -v

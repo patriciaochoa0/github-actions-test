@@ -1,0 +1,17 @@
+name: Actions Workflow(po)
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@v1 ##or branch version/or commit ID
+        with:    ##how to provide an input with an action? is with the WITH key 
+          who-to-greet: John 
+          ##actions can also produce an output. 
+      - name: Log Greeting Time
+          run: echo "${{ steps.greet.outputs.time }}"    ##in order to output name (in SJSAction) you need tp
+                      #reference a certain step (above) you do so by giving it an id

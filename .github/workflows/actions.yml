@@ -1,4 +1,4 @@
-name: Actions Workflow(po)
+name: Actions Workflow (po)
 
 on: [push]
 
@@ -13,5 +13,5 @@ jobs:
           who-to-greet: John 
           ##actions can also produce an output. 
       - name: Log Greeting Time
-          run: echo "${{ steps.greet.outputs.time }}"    ##in order to output name (in SJSAction) you need tp
-                      #reference a certain step (above) you do so by giving it an id
+        run: echo "${{ steps.greet.outputs.time }}"    ##in order to output name (in SJSAction) you need tp
+                                
